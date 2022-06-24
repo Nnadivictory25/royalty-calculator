@@ -1,0 +1,8 @@
+@use '../util/breakpoints.scss' as *;
+@use '../util/functions.scss' as *;
+
+// This is where mixins will be created . 
+
+@mixin reset {
+    border: none !important;
+}

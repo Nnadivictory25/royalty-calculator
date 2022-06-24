@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PNL Calculator</title>
+
+          <!-- custom stylesheet + script -->
+   <link rel="stylesheet" href="/dist/style.css">
+   <script defer src="/dist/script.js"></script>
+
+  <!-- favicon img -->
+  <link rel="shortcut icon" href="/images/sol.png" type="image/x-icon">
+
+
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <!-- boxicon cdn -->
+  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+</head>
+<body>
+
+    <h2 class="animate__animated animate__backInLeft" >SOL NFT PNL CALCULATOR</h2>
+
+    <form action="">
+
+        <div class="input-container animate__animated animate__bounceInLeft">
+                <input placeholder="Buy Amount" id="buyAmount" type="text" onkeyup="calc()">
+                <img src="/images/sol.png" alt="">
+        </div>
+        <div class="input-container animate__animated animate__bounceInRight">
+                <input placeholder="Sell Amount" id="saleAmount" type="text" onkeyup="calc()">
+                <img src="/images/sol.png" alt="">
+        </div>
+        <div class="input-container animate__animated animate__bounceInLeft">
+                <input placeholder="Royalties %" id="royalties" type="text" onkeyup="calc()">
+                <i class='bx bx-crown'></i>
+        </div>
+
+        <div class="output-container">
+            <span id="output" ></span>
+        </div>
+
+        <button type="reset" id="resetBtn" style="display: none;">Reset</button>
+
+    </form>
+
+<footer>
+    Made with <i class='bx bxs-heart'></i> by NNADI VICTORY (Kamas)
+</footer>
+</body>
+</html>

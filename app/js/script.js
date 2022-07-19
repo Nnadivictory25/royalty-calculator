@@ -13,7 +13,7 @@ function calc() {
     resetBtn.style.display = 'block'
 
     if (total + gain < buyAmount) {
-        output.innerHTML = `The buying amount is ${buyAmount} sol, the selling amount is ${saleAmount} sol, the royalties is ${royalties} sol, the total amount credited to your wallet will be ${total} sol and your loss is ${gain} sol ☹️`
+        output.innerHTML = `The buying amount is ${buyAmount} sol, the selling amount is ${saleAmount} sol, the royalties is ${royalties} sol, the total amount credited to your wallet will be ${total} sol and your loss is ${Math.abs(gain)} sol ☹️`
     } else {
         output.innerHTML = `The buying amount is ${buyAmount} sol, the selling amount is ${saleAmount} sol, the royalties is ${royalties} sol, the total amount credited to your wallet will be ${total} sol and your gain is ${gain} sol 😊 `
     }

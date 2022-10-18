@@ -1,3 +1,36 @@
 @use '../util/breakpoints.scss' as *;
 @use '../util/functions.scss' as *;
 @use '../util/mixins.scss' as *;
+
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #343434;
+    height: rem(36);
+    width: 100%;
+
+    p {
+        font-weight: 700;
+        color: white;
+        margin-right: rem(10);
+    }
+    
+}
+
+.green {
+    color: rgb(27, 241, 27) !important;
+    margin-left: 7px;
+}
+.red {
+    color: red !important;
+    margin-left: 7px;
+    font-size: .9rem;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    font-size: .9rem;
+}

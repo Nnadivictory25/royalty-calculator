@@ -7,7 +7,7 @@ fetch(
     const sol = Object.getOwnPropertyNames(json);
     const coinInfo = json[sol];
     const price = coinInfo.usd;
-    const change = coinInfo.usd_24h_change.toFixed(4);
+    const change = coinInfo.usd_24h_change.toFixed(2);
 
     priceInfoCtn.innerHTML += `
             <p>SOL PRICE :</p>

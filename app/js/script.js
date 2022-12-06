@@ -1,3 +1,5 @@
+let solPrice = 0
+
 fetch(
   "https://api.coingecko.com/api/v3/simple/price?ids=solana&vs_currencies=usd&include_24hr_change=true"
 )
@@ -7,6 +9,7 @@ fetch(
     const sol = Object.getOwnPropertyNames(json);
     const coinInfo = json[sol];
     const price = coinInfo.usd;
+    solPrice = price
     const change = coinInfo.usd_24h_change.toFixed(2);
 
     priceInfoCtn.innerHTML += `
@@ -31,8 +34,8 @@ function calc() {
   if (total + gain < buyAmount) {
     output.innerHTML = `Total amount credited to your wallet will be ${total} sol and your loss is ${Math.abs(
       gain
-    )} sol ☹️`;
+    ).toFixed(3)} sol ☹️ <br> <p class="red">(${(solPrice * Math.abs(gain)).toFixed(2)}$ Loss)</p>`;
   } else {
-    output.innerHTML = `Total amount credited to your wallet will be ${total} sol and your gain is ${gain} sol 😊 `;
+    output.innerHTML = `Total amount credited to your wallet will be ${total} sol and your gain is ${(gain).toFixed(3)} sol 😊 <br> <p class="green">(${(solPrice * gain).toFixed(2)}$ gain)</p>`;
   }
 }

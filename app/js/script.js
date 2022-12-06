@@ -12,7 +12,7 @@ fetch(
     priceInfoCtn.innerHTML += `
             <p>SOL PRICE :</p>
             <p>${price}$</p>
-            <p class=${change < 0 ? "red" : "green"}>${change}%</p>
+            <p class=${change < 0 ? "red" : "green"}>${change < 0 ? change : '+' + change}%</p>
         `;
   });
 
